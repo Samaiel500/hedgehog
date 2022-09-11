@@ -1,0 +1,57 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 191px;
+        &:not(:last-child) {
+            margin-right: 8vw;
+        }
+        &:nth-child(odd) {
+            margin-top: 135px;
+        }
+        &:nth-child(2) {
+            margin-top: 110px;
+        }
+    }
+    &__loop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        height: 152px;
+        border-radius: 100%;
+        box-shadow: 4px 4px 20px #C2CCCA, -8px -8px 20px #FFFFFF;
+        &--one {
+            background: #FFEDCD;
+        }
+        &--two {
+            background: #E2F0DF;
+        }
+        &--three {
+            background: #70908B;
+        }
+    }
+    &__title {
+        margin-top: 30px;
+        font-family: 'Cormorant Infant';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #195557;
+    }
+    &__subtitle {
+        margin-top: 8px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #195557;
+
+    }
+}

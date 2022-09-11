@@ -1,0 +1,94 @@
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 4vw;
+        }
+    }
+    &__link {
+        font-family: 'Cormorant Infant';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        transition: all .5s;
+        &-sub {
+            padding-left: 10px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 10px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url(../icons/down.svg) 0 0 no-repeat;
+                transition: all .4s;
+            }
+            &:hover::after {
+                transform: rotate(90deg);
+            }
+        }
+        &--header {
+            color: #195557;
+        }
+        &--footer {
+            color: #FFFFFF;
+        }
+        &:hover {
+           color: #195557;
+           border-bottom: 1px solid #195557; 
+        }
+    }
+    &-sub {
+        display: none;
+        padding: 19px 0 0 24px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 169px;
+        height: 173px;
+        box-shadow: 4px 4px 20px #C2CCCA;
+        border-radius: 8px;
+        background: #FFFEFE;
+        transition: display .6s;
+        &__item {
+            margin-bottom: 10px;
+        }
+        &__link {
+            font-family: 'Cormorant Infant';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #195557;
+            &:hover {
+                color: #195557;
+                border-bottom: 1px solid #195557; 
+            }
+        }
+    }
+}
+
+.nav__list>li:hover .nav-sub {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #195557;
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+    }
+}

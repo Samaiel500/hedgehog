@@ -1,0 +1,167 @@
+.header {
+    position: relative;
+    padding: 35px 45px 0 60px;
+    background-image: url("../img/Subtract.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 992px;
+    &__logo {
+        margin-left: 7px;
+    }
+    &__menu {
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    &__phone {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #195557;
+        transition: all .5s;
+        &::after {
+            content: '';
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            top: -50%;
+            transform: translate(-50%);
+            background: linear-gradient(1.36deg, #B0D3CE 12.29%, #FFEDCE 83.89%);
+            box-shadow: -4px -4px 20px #FFFFFF, 4px 4px 20px #CFD7D3;
+            border-radius: 40px;
+            width: 70px;
+            height: 70px;
+        }
+        &::before {
+            content: '';
+            z-index: 11;
+            position: absolute;
+            background: url(../icons/Tel.svg) 0 0 no-repeat;
+            left: -5%;
+            top: 3px;
+            width: 27px;
+            height: 27px;
+        }
+        &:hover {
+            color: #195557;
+        }
+    }
+    &__tel {
+        position: relative;
+        display: none;
+        align-items: center;
+        padding-left: 40px;
+        transition: all .5s;
+        &::after {
+            content: '';
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            top: -50%;
+            transform: translate(-50%);
+            background: linear-gradient(1.36deg, #B0D3CE 12.29%, #FFEDCE 83.89%);
+            box-shadow: -4px -4px 20px #FFFFFF, 4px 4px 20px #CFD7D3;
+            border-radius: 40px;
+            width: 70px;
+            height: 70px;
+        }
+        &::before {
+            content: '';
+            z-index: 11;
+            position: absolute;
+            background: url(../icons/Tel.svg) 0 0 no-repeat;
+            left: -30%;
+            top: 3px;
+            width: 27px;
+            height: 27px;
+        }
+    }
+    &__card {
+        margin-left: 5vw;
+    }
+    &__phonecard {
+        display: flex;
+    }
+
+    .hedgehog {
+        position: absolute;
+        width: 24vw;
+        &--one {
+            left: 0%;
+            bottom: -9%;
+        }
+        &--two {
+            right: 0%;
+            bottom: -7%;
+        }
+    }
+}
+
+.menu {
+    &:target {
+        display: flex;
+    }
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-left: 26px;
+    padding-bottom: 45px;
+    position: absolute;
+    width: 301px;
+    height: 480px;
+    left: 0;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 20px #E3E3E3;
+    border-radius: 0px 10px 10px 0px;
+    &-nav {
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+        &__link {
+            font-family: 'Cormorant Infant';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            color: #195557;
+            &:hover {
+                color: #195557;
+                border-bottom: 1px solid #195557; 
+            }
+        }
+    }
+    &__close {
+        margin-right: 85px;
+    }
+    &__link {
+        &-logo {
+            width: 56px;
+            height: 26px;
+        }
+    }
+    &__phone {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        color: #195557;
+    }
+}

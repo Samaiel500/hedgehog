@@ -1,0 +1,35 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@import "header";
+@import "nav";
+@import "main";
+@import "btn";
+@import "circle";
+@import "slider";
+@import "form";
+@import "footer";
+@import "footer-nav";
+@import "media";

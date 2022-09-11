@@ -1,0 +1,151 @@
+.form {
+    padding-top: 90px;
+    &__title {
+        font-family: 'Cormorant Infant';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 54px;
+        color: #195557;
+        margin-bottom: 30px;
+    }
+    &__block {
+        position: relative;
+        padding: 40px 50px;
+        padding-bottom: 60px;
+        background: #EAEEEF;
+        border-radius: 30px;
+    }
+    &__radio {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 43px;
+        &-wrapp {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px 49px;
+        }
+        &-btn {
+            input[type=radio] {
+                display: none;
+                &:checked {
+                    +label {
+                        &::before {
+                           background: url(../icons/check.png) 0 0 no-repeat; 
+                        }
+                    }
+                }
+            }
+            label {
+                cursor: pointer;
+                padding-left: 25px;
+                position: relative;
+                font-family: 'Cormorant Infant';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                color: #70908B;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: url(../icons/no-check.png) 0 0 no-repeat;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+    &__radiobtn {
+        display: inline-block;
+        margin-right: 14px;
+        input[type=radio] {
+            display: none;
+            &:checked {
+                +label {
+                   background: #70908B;
+                   color: #FFFFFF; 
+                }
+            }
+        }
+        label {
+            display: inline-block;
+            cursor: pointer;
+            padding: 16px 20px;
+            background: #FFFFFF;
+            line-height: 34px;
+            border: 2px solid #70908B;
+            border-radius: 61px;
+            user-select: none;
+            font-family: 'Cormorant Infant';
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #70908B;
+        }
+    }
+    &__area {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 62px 108px;
+        gap: 20px;
+    }
+    &__text {
+        padding-left: 27px;
+        background: #F8F8F8;
+        border-radius: 8px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #195557;
+        border: none;
+    }
+    &__text[placeholder='Комментарий к заявке'] {
+        grid-column: 1 / -1;
+    }
+}
+
+.stay {
+    margin-top: 100px;
+    text-align: center;
+    padding-bottom: 100px;
+    &__title {
+        display: inline-block;
+        padding-left: 45px;
+        font-family: 'Cormorant Infant';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #195557;
+        position: relative;
+        span {
+            text-decoration:underline;
+        }
+        &::after {
+            content:'';
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background: url(../icons/openmoji_hedgehog1.svg) 0 0 no-repeat;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__text {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #195557;
+    }
+}
